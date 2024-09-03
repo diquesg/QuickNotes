@@ -14,3 +14,7 @@ textarea {
 button {
     margin-top: 10px;
 }
+
+nav{
+    list-style: none;
+}
