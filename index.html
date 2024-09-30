@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image" href="src\assets\logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>QuickNotes</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Função para salvar automaticamente no localStorage
+      function salvarNota() {
+        const conteudo = document.getElementById("anotacao").value;
+        localStorage.setItem("minhaNota", conteudo); // Salva no localStorage
+        document.getElementById("status").textContent = "Salvo automaticamente.";
+      }
+
+      // Carrega o conteúdo salvo quando a página for recarregada
+      window.onload = function() {
+        const notaSalva = localStorage.getItem("minhaNota");
+        if (notaSalva) {
+          document.getElementById("anotacao").value = notaSalva;
+        }
+      };
+
+      // Salva automaticamente a cada 5 segundos
+      setInterval(salvarNota, 5000); // Tempo em milissegundos (5000ms = 5s)
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
