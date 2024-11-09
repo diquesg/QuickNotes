@@ -5,7 +5,7 @@ import EditBar from "./components/EditBar"
 
 function App() {
   return (
-    <div>
+    <div className="page-container">
       <Navbar/>
       <div className="page-wrapper">
         <Aside/>
