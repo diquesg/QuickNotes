@@ -1,11 +1,23 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
-import EditBar from "./EditBar"
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 export default function WriteSection() {
   const [conteudo, setConteudo] = useState('');
   const [titulo, setTitulo] = useState('Titulo');
   const [status, setStatus] = useState('Salvando...');
   const [editandoTitulo, setEditandoTitulo] = useState(false);
+
+  const modules = {
+    toolbar: [
+      [{ 'header': [1, 2, 3, false] }],
+      ['bold', 'italic', 'underline'],
+      ['link'],
+      [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+      ['clean']
+    ],
+  };
 
   useEffect(() => {
     const notaSalva = localStorage.getItem('minhaNota');
@@ -18,24 +30,25 @@ export default function WriteSection() {
     }
   }, []);
 
-  useEffect(() => {
-    const salvarNota = () => {
-      localStorage.setItem('minhaNota', conteudo);
-      localStorage.setItem('meuTitulo', titulo);
-      setStatus('Salvo automaticamente.');
-    };
+  const salvarNota = () => {
+    console.log("Salvando nota...");
+    localStorage.setItem('minhaNota', conteudo);
+    localStorage.setItem('meuTitulo', titulo);
+    setStatus('Salvo automaticamente.');
+  };
 
+  useEffect(() => {
     const intervalo = setInterval(salvarNota, 5000);
     return () => clearInterval(intervalo);
   }, [conteudo, titulo]);
 
-  const handleChange = (e) => {
-    setConteudo(e.target.value);
+  const handleTituloChange = (e) => {
+    setTitulo(e.target.value);
     setStatus('Salvando...');
   };
 
-  const handleTituloChange = (e) => {
-    setTitulo(e.target.value);
+  const handleConteudoChange = (value) => {
+    setConteudo(value);
     setStatus('Salvando...');
   };
 
@@ -43,7 +56,7 @@ export default function WriteSection() {
     setEditandoTitulo(!editandoTitulo);
   };
 
-  const handleKeyDown = (e) =>{
+  const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       toggleEditandoTitulo();
     }
@@ -64,21 +77,21 @@ export default function WriteSection() {
             onKeyDown={handleKeyDown}
           />
         ) : (
-          <>
-            <div className='titulo-botao'>
-              <h1>{titulo}</h1>
-              <button onClick={toggleEditandoTitulo} className="botao-editar"><img src="src\img\pen.png"/></button>
-            </div>
-          </>
+          <div className='titulo-botao'>
+            <h1>{titulo}</h1>
+            <button onClick={toggleEditandoTitulo} className="botao-editar">
+              <img src="src/img/pen.png" alt="Editar" />
+            </button>
+          </div>
         )}
         <p id="status">{status}</p>
       </div>
-      <EditBar/>
-      <textarea
-        id="anotacao"
+      <ReactQuill
         value={conteudo}
-        onChange={handleChange}
-        placeholder="Digite sua nota aqui..."
+        onChange={handleConteudoChange}
+        theme="snow"
+        className='textarea'
+        modules={modules}
       />
     </div>
   );

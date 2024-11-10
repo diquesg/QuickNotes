@@ -6,8 +6,7 @@ export default function Navbar(){
                 <h1 className="nav-title">QuickNotes</h1>
             </div>
             <div className="nav-buttons">
-                <button><a href="">Login</a></button>
-                <button><a href="">Registrar</a></button>
+                <button className="button" href=""><span>Log-in/Registrar</span></button>
             </div>
         </nav>
     )

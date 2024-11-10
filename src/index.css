@@ -10,7 +10,7 @@ body {
 nav{
   display: flex;
   align-items: center;
-  background-color: #726358;
+  background-color: #6e6661;
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.082);
 }
@@ -39,42 +39,58 @@ nav{
 
 .nav-buttons{
   margin-right: 30px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px;
 }
 
-.nav-buttons button{
-  border: 1px solid white;
-  background-color: #55483f3f;
-  color: #f0f0f0;
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  padding: 5px;
-  width: 100px;
+.button {
+  padding: 0.1em 0.25em;
+  width: 13em;
+  height: 4.2em;
+  background-color: #463c37;
+  border: 0.08em solid #fff;
+  border-radius: 0.3em;
+  font-size: 12px;
+  cursor: pointer;
 }
 
-.nav-buttons button:hover{
-  background-color: rgba(0, 0, 0, 0.384);
+.button span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0.4em;
+  width: 8.25em;
+  height: 2.5em;
+  background-color: #3d3936;
+  border-radius: 0.2em;
+  font-size: 1.5em;
+  color: #fff;
+  border: 0.08em solid #fff;
+  box-shadow: 0 0.4em 0.1em 0.019em #fff;
 }
 
-.nav-buttons button>a{
-  text-decoration: none;
-  color: #f0f0f0;
+.button span:hover {
+  transition: all 0.5s;
+  transform: translate(0, 0.4em);
+  box-shadow: 0 0 0 0 #fff;
 }
 
-textarea{
+.button span:not(hover) {
+  transition: all 1s;
+}
+
+.textarea{
   width: 84vw;
-  border: none;
-  resize: none;
   flex-grow: 1;
   height: 76vh;
   font-size: 18px;
-  padding: 50px;
 }
 
 #note-container{
   height: 100vh;
 }
 
-textarea:enabled{
+.textarea:enabled{
   outline: none;
 }
 
@@ -93,7 +109,7 @@ aside {
   padding-left: 15px;
   float: right;
   font-style: italic;
-  background-color: rgba(211, 211, 211, 0.342);
+  background-color: #F4F4F4;
   border-right: 1px solid rgba(0, 0, 0, 0.089);
 }
 
@@ -149,7 +165,7 @@ aside {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: #f5f1f1;
+  background-color: #F4F4F4;
 }
 
 .titulo-edit{
@@ -168,17 +184,21 @@ aside {
 
 .titulo-botao{
   display: flex;
-  align-items: baseline;
+  align-items: center;
+}
+
+.titulo-botao:hover{
+  outline: auto;
 }
 
 .botao-editar img{
-  width: 17px;
+  width: 16px;
 }
 
 .botao-editar{
   border: none;
   background-color: none;
-  margin-left: 10px;
+  margin-left: 2px;
 }
 
 .botao-editar:hover{
