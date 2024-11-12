@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 
-export default function LoginScreen(){
+export default function RegisterScreen(){
     return(
         <div>
             <Navbar/>
