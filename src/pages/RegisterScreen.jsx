@@ -6,7 +6,7 @@ export default function RegisterScreen(){
             <Navbar/>
             <div className="login-card-wrapper">
                 <div className="login-card">
-                    <h1>Crie sua conta para criar notas.</h1>
+                    <h1>Crie sua conta para criar notas</h1>
                     <form id="registro" method="POST">
                         <label for="email">E-mail:</label>
                         <input type="text" id="email" name="email" placeholder="Digite seu e-mail." required/><br></br>
