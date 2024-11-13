@@ -29,11 +29,11 @@ nav{
 }
 
 .nav-title{
-  font-family: "Oswald", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 35px;
   color: #f0f0f0;
   font-weight: 900;
-  letter-spacing: -0.5px;
+  letter-spacing: -1.9px;
   margin: 0;
   margin-left: 5px;
 }
@@ -91,22 +91,19 @@ nav{
 }
 
 .login-card{
-  background-color: rgba(43, 56, 61, 0.801);
+  background-color: rgb(65, 84, 95);
   color: white;
-  padding: 50px;
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   font-size: larger;
-  width: 500px;
+  width: 850px;
+  display: flex;
+  margin-bottom: 75px;
 }
 
-.login-card h1{
-  font-size: 36px;
-  margin-bottom: 20px;
-  font-weight: 900;
-  letter-spacing: -0.5px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.322);
-  color: rgb(241, 240, 238);
+footer{
+  background-color: white;
+  width: 100vw;
 }
 
 .login-card a{
@@ -117,6 +114,7 @@ nav{
   margin-top: 20px;
   width: 100%;
 }
+
 .login-card span{
   width: 100%;
 }
@@ -124,14 +122,51 @@ nav{
 .login-card form{
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: 100%;
   line-height: 30px;
+  padding: 50px;
 }
 
 .login-card form input{
   height: 40px;
   border-style: none;
   border-radius: 8px;
+}
+
+.login-title h1{
+  font-size: 52px;
+  margin-bottom: -5px;
+  font-weight: 900;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: -2.5px;
+}
+
+.login-title{
+  color: #ffffff;
+}
+
+.login-title img{
+  width: 80%;
+  margin-top: 40px;
+}
+
+.login-title{
+  background-color: rgb(43, 56, 61);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.login-title a{
+  color: rgb(245, 203, 15);
+}
+
+.login-title p{
+  font-weight: 300;
+  font-size: 16px;
+  margin-top: -10px;
 }
 
 #button-form span{

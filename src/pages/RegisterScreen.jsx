@@ -6,14 +6,19 @@ export default function RegisterScreen(){
             <Navbar/>
             <div className="login-card-wrapper">
                 <div className="login-card">
-                    <h1>Crie sua conta para criar notas</h1>
+                    <div className="login-title">
+                        <h1>QuickNotes</h1>
+                        <h3>Registre-se para criar notas</h3>
+                        <p>Já tem uma conta? <a href="/login">Faça login.</a></p>
+                        <img src="src\assets\logo.png"/>
+                    </div>
                     <form id="registro" method="POST">
                         <label for="email">E-mail:</label>
-                        <input type="text" id="email" name="email" placeholder="Digite seu e-mail." required/><br></br>
+                        <input type="text" id="email" name="email" required/><br></br>
                         <label for="senha">Senha:</label>
-                        <input type="text" id="senha" name="senha" placeholder="Digite sua senha." required/><br></br>
+                        <input type="text" id="senha" name="senha" required/><br></br>
                         <label for="senha">Confirmar Senha:</label>
-                        <input type="text" id="senha" name="senha" placeholder="Confirme sua senha." required/><br></br>
+                        <input type="text" id="senha" name="senha" required/><br></br>
                         <button className="button" type="submit" href="" id="button-form"><span>Registrar</span></button>
                     </form>
                 </div>
