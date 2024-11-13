@@ -161,6 +161,8 @@ footer{
 
 .login-title a{
   color: rgb(245, 203, 15);
+  text-decoration: underline;
+  font-weight: 400;
 }
 
 .login-title p{
