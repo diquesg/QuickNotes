@@ -14,7 +14,7 @@ export default function RegisterScreen(){
                         <input type="text" id="senha" name="senha" placeholder="Digite sua senha." required/><br></br>
                         <label for="senha">Confirmar Senha:</label>
                         <input type="text" id="senha" name="senha" placeholder="Confirme sua senha." required/><br></br>
-                        <button className="button" type="submit" href=""><span>Registrar</span></button>
+                        <button className="button" type="submit" href="" id="button-form"><span>Registrar</span></button>
                     </form>
                 </div>
             </div>

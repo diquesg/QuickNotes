@@ -94,9 +94,10 @@ nav{
   background-color: rgba(43, 56, 61, 0.801);
   color: white;
   padding: 50px;
-  border-radius: 6px;
+  border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   font-size: larger;
+  width: 500px;
 }
 
 .login-card h1{
@@ -114,6 +115,10 @@ nav{
 
 .login-card button{
   margin-top: 20px;
+  width: 100%;
+}
+.login-card span{
+  width: 100%;
 }
 
 .login-card form{
@@ -127,6 +132,10 @@ nav{
   height: 40px;
   border-style: none;
   border-radius: 8px;
+}
+
+#button-form span{
+  background-color: rgb(29, 32, 34);
 }
 
 .textarea{
@@ -254,3 +263,4 @@ aside {
 .botao-editar:hover{
   cursor: pointer;
 }
+
