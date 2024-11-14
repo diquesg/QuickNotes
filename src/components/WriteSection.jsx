@@ -74,6 +74,7 @@ export default function WriteSection() {
             autoFocus
             className="titulo-edit"
             maxLength={60}
+            minLength={5}
             onKeyDown={handleKeyDown}
           />
         ) : (
