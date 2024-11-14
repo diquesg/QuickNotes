@@ -5,7 +5,7 @@ import 'react-quill/dist/quill.snow.css';
 
 export default function WriteSection() {
   const [conteudo, setConteudo] = useState('');
-  const [titulo, setTitulo] = useState('Titulo');
+  const [titulo, setTitulo] = useState('Nova Nota');
   const [status, setStatus] = useState('Salvando...');
   const [editandoTitulo, setEditandoTitulo] = useState(false);
 

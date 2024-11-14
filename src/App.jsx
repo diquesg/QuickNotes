@@ -1,18 +1,17 @@
-import Navbar from "./components/Navbar"
-import WriteSection from "./components/WriteSection"
-import Aside from "./components/Aside"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import LoginScreen from "./pages/LoginScreen"
+import NewNote from "./pages/NewNote"
+import RegisterScreen from "./pages/RegisterScreen"
 
 function App() {
   return (
-    <div className="page-container">
-      <Navbar/>
-      <div className="page-wrapper">
-        <Aside/>
-        <div className="note-wrapper">
-          <WriteSection/>
-        </div>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/registro" element={<RegisterScreen/>}/>
+        <Route path="/login" element={<LoginScreen/>}/>
+        <Route path="/nova-nota" element={<NewNote/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

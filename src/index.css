@@ -134,7 +134,7 @@ footer{
 }
 
 .login-title h1{
-  font-size: 52px;
+  font-size: 48px;
   margin-bottom: -5px;
   font-weight: 900;
   font-family: "Raleway", sans-serif;
@@ -171,6 +171,11 @@ footer{
   margin-top: -10px;
 }
 
+#login-logo{
+  width: 250px;
+  margin-top: 15px;
+}
+
 #button-form span{
   background-color: rgb(29, 32, 34);
 }
@@ -202,11 +207,34 @@ footer{
 
 aside {
   width: 16vw;
-  padding-left: 15px;
   float: right;
-  font-style: italic;
   background-color: #F4F4F4;
   border-right: 1px solid rgba(0, 0, 0, 0.089);
+  overflow: auto;
+}
+
+.aside-notes{
+  background-color: white;
+}
+
+.aside-note-wrapper{
+  padding-left: 20px;
+  width: 100%;
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.034);
+  height: 9vh;
+}
+
+.aside-note-title{
+  font-size: 16px;
+  margin: 0;
+}
+
+.aside-note-date{
+  font-size: 13px;
+  margin: 0;
+  margin-top: -8px;
+  color: #000000a9;
 }
 
 .aside-nav-list{

@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-
+import { Outlet, Link } from "react-router-dom";
 export default function RegisterScreen(){
     return(
         <div>
@@ -9,7 +9,7 @@ export default function RegisterScreen(){
                     <div className="login-title">
                         <h1>QuickNotes</h1>
                         <h3>Registre-se para criar notas</h3>
-                        <p>Já tem uma conta? <a href="/login">Faça login.</a></p>
+                        <p>Já tem uma conta? <Link to="/login">Faça login.</Link></p>
                         <img src="src\assets\logo.png"/>
                     </div>
                     <form id="registro" method="POST">
@@ -23,6 +23,7 @@ export default function RegisterScreen(){
                     </form>
                 </div>
             </div>
+            <Outlet/>
         </div>
     )
 }
